@@ -6,9 +6,15 @@ import { SPACINGS } from "../../utils/layout/consts";
 import isMobileViewport from "./isMobileViewport";
 import getProperty from "./getProperty";
 import { QUERIES } from "../../utils/mediaQuery/consts";
+<<<<<<< HEAD:packages/orbit-components/src/Stack/helpers/getChildrenMargin.ts
 import { Devices } from "../../utils/mediaQuery/types";
 import getDirectionSpacingTemplate from "./getDirectionSpacingTemplate";
 import { Props, Direction } from "../types";
+=======
+import { Devices } from "../../utils/mediaQuery/index.d";
+import getDirectionSpacingTemplate from "./getDirectionSpacingTemplate";
+import { Props, Direction } from "../index.d";
+>>>>>>> 5169f718a (refactor: second bunch of refactoring to ts (#3554)):packages/orbit-components/src/Stack/helpers/getChildrenMargin.js
 import { Theme } from "../../defaultTheme";
 
 interface StyledProps extends Props {

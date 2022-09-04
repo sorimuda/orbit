@@ -8,8 +8,13 @@ import defaultTheme from "../defaultTheme";
 import { SPACINGS } from "../utils/layout/consts";
 import getSpacing from "../Stack/helpers/getSpacing";
 import getDirectionSpacingTemplate from "../Stack/helpers/getDirectionSpacingTemplate";
+<<<<<<< HEAD:packages/orbit-components/src/LinkList/index.tsx
 import { Props } from "./types";
 import { Spacing } from "../Stack/types";
+=======
+import { Props } from "./index.d";
+import { Spacing } from "../Stack";
+>>>>>>> 5169f718a (refactor: second bunch of refactoring to ts (#3554)):packages/orbit-components/src/LinkList/index.jsx
 
 const StyledLinkList = styled.ul<{ $direction?: "column" | "row"; $indent?: boolean }>`
   ${({ $direction, $indent, theme }) => css`
@@ -31,10 +36,16 @@ StyledLinkList.defaultProps = {
 const resolveSpacings = ({
   $spacing,
   $direction,
+<<<<<<< HEAD:packages/orbit-components/src/LinkList/index.tsx
   theme,
 }: {
   $spacing?: Spacing;
   theme: typeof defaultTheme;
+=======
+  ...props
+}: {
+  $spacing?: Spacing;
+>>>>>>> 5169f718a (refactor: second bunch of refactoring to ts (#3554)):packages/orbit-components/src/LinkList/index.jsx
   $direction?: "column" | "row";
 }) => {
   const margin =
@@ -42,7 +53,11 @@ const resolveSpacings = ({
     $direction &&
     String(getDirectionSpacingTemplate($direction)).replace(
       "__spacing__",
+<<<<<<< HEAD:packages/orbit-components/src/LinkList/index.tsx
       getSpacing(theme)[$spacing],
+=======
+      getSpacing(props)[$spacing],
+>>>>>>> 5169f718a (refactor: second bunch of refactoring to ts (#3554)):packages/orbit-components/src/LinkList/index.jsx
     );
 
   return css`
