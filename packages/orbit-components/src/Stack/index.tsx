@@ -9,11 +9,7 @@ import { isDefined } from "../utils/layout";
 import shouldUseFlex from "./helpers/shouldUseFlex";
 import getViewportFlexStyles from "./helpers/getViewportFlexStyles";
 import getChildrenMargin from "./helpers/getChildrenMargin";
-<<<<<<< HEAD:packages/orbit-components/src/Stack/index.tsx
 import { Props } from "./types";
-=======
-import { Props } from "./index.d";
->>>>>>> 5169f718a (refactor: second bunch of refactoring to ts (#3554)):packages/orbit-components/src/Stack/index.jsx
 
 const StyledStack = styled(({ className, element: Element, children, dataTest }) => (
   <Element className={className} data-test={dataTest}>
