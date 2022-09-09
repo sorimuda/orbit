@@ -42,7 +42,7 @@ import Itinerary, {
   ItineraryStatus,
 } from ".";
 
-const StyledText = styled.p<{ type: any }>`
+const StyledText = styled.span<{ type?: string; weight?: string }>`
   ${({ theme, type }) => css`
     font-weight: ${theme.orbit.fontWeightBold};
     font-size: ${theme.orbit.fontSizeTextSmall};
@@ -393,11 +393,8 @@ export const Stop = () => {
               <ItinerarySegmentBanner>
                 <ItineraryBadgeList>
                   <BadgeListItem type="warning" icon={<StarFull color="warning" />}>
-                    <StyledText as="span" type="warning">
-                      Hidden city hack:{" "}
-                    </StyledText>{" "}
-                    This itinerary finishes in New York (United States), but you’ll get off during
-                    the layover
+                    <StyledText type="warning">Hidden city hack: </StyledText> This itinerary
+                    finishes in New York (United States), but you’ll get off during the layover
                   </BadgeListItem>
                   <BadgeListItem icon={<Visa />}>
                     Check travel document requirements for all destinations, including passport,
@@ -454,7 +451,7 @@ export const Stop = () => {
               <ItinerarySegmentBanner>
                 <ItineraryBadgeList>
                   <BadgeListItem type="info" icon={<StarFull color="info" />}>
-                    <StyledText as="span" type="info" weight="bold">
+                    <StyledText type="info" weight="bold">
                       Throwaway ticketing hack:{" "}
                     </StyledText>{" "}
                     You are saving money with this travel hack.
