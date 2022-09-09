@@ -39,7 +39,7 @@ module.exports = {
 
     const rules = [
       {
-        test: /\.(js|mjs|jsx|ts|tsx)$/,
+        test: /\.(js|mjs|jsx|ts|tsx|mts)$/,
         exclude: /node_modules/,
         loader: "babel-loader",
         options: {
