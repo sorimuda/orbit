@@ -23,12 +23,12 @@ const StyledStack = styled(({ className, element: Element, children, dataTest })
       viewport in mediaQueries
         ? mediaQueries[viewport](css`
             ${isDefined(props[viewport]) && getViewportFlexStyles(viewport)};
-            ${getChildrenMargin({ viewport, index, devices })}
+            ${getChildrenMargin({ viewport, index, devices })};
           `)
         : viewport === "smallMobile" &&
           css`
             ${getViewportFlexStyles(viewport)};
-            ${getChildrenMargin({ viewport, index, devices })}
+            ${getChildrenMargin({ viewport, index, devices })};
           `,
     )};
 `;
